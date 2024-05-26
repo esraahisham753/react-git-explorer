@@ -40,7 +40,7 @@ const SearchUser = () => {
         navigate("/");
       }, 3000)
     }
-  }, [attempts]);
+  }, [attempts, navigate]);
   return (
     <>
       <h3>Search User</h3>
