@@ -8,46 +8,52 @@ const AuthProfile = lazy(() => import("./components/authProfile"));
 const Login = lazy(() => import("./components/login"));
 const NotFound = lazy(() => import("./components/notfound"));
 const UserProfile = lazy(() => import("./components/userProfile"));
+const RepoDetail = lazy(() => import("./components/repoDetail"));
 
 export const appRoutes = [
   {
     path: "/",
     component: Home,
-    requiresAuth: false
+    requiresAuth: false,
   },
   {
     path: "/about",
     component: AboutUs,
-    requiresAuth: false
+    requiresAuth: false,
   },
   {
     path: "/users",
     component: Users,
-    requiresAuth: false
+    requiresAuth: false,
   },
   {
     path: "/search",
     component: SearchUser,
-    requiresAuth: false
+    requiresAuth: false,
   },
   {
     path: "/authprofile",
     component: AuthProfile,
-    requiresAuth: true
+    requiresAuth: true,
   },
   {
     path: "/login",
     component: Login,
-    requiresAuth: false
-  },
-  {
-    path: "*",
-    component: NotFound,
-    requiresAuth: false
+    requiresAuth: false,
   },
   {
     path: "/users/user/:username",
     component: UserProfile,
-    requiresAuth: false
+    requiresAuth: false,
+  },
+  {
+    path: "/repo-detail/:name/:username",
+    component: RepoDetail,
+    requiresAuth: false,
+  },
+  {
+    path: "*",
+    component: NotFound,
+    requiresAuth: false,
   },
 ];
